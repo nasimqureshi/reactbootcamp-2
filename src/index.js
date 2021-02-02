@@ -4,7 +4,7 @@ import './index.css';
 
 function BookList(){
   return(
-    <section>
+    <section className='list'>
       <Book />
       <Book />
       <Book />
@@ -17,7 +17,7 @@ function BookList(){
 }
 const Book = () => {
   return(
-    <article>
+    <article className='book'>
       <Image />
       <Title />
       <Author />
@@ -30,7 +30,8 @@ const Image = () => (
   <img src="https://img.thriftbooks.com/api/images/s/fedfc44765ea0090f3f942ce3865c097f6b4f578.jpg" alt=""></img>
 );
 const Title = () =><h1>The Odyssey</h1>;
-const Author = () => <h4>Stieg Larson</h4>
+const Author = () => <h4 style={{color:'#617d98',fontSize:'0.75rem',
+marginTop: '0.25rem'}}>Stieg Larson</h4>
 
 ReactDOM.render(<BookList />, document.getElementById('root')
 );
