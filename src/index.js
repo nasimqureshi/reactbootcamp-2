@@ -8,11 +8,18 @@ const firstBook ={
   title:'The Odyssey',
   author: 'Stieg Larson'
 }
+const secondBook ={
+  img: 'https://images-na.ssl-images-amazon.com/images/I/51b-OAdpJqL._AC_SX184_.jpg',
+  title:'How Toddlers Thrive',
+  author: 'Tovah P Klein'
+}
+
 
 function BookList(){
   return(
     <section className='list'>
       <Book img={firstBook.img} title={firstBook.title} author={firstBook.author} />
+      <Book img={secondBook.img} title={secondBook.title} author={secondBook.author} />
       </section>
   )
 }
