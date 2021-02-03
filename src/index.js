@@ -3,16 +3,16 @@ import ReactDOM, { render } from 'react-dom';
 import './index.css';
 
 // Variables 
-const title ='The Odyssey';
-const author ='Stieg Larson';
-const img =
-'https://img.thriftbooks.com/api/images/s/fedfc44765ea0090f3f942ce3865c097f6b4f578.jpg';
+const firstBook ={
+  img: 'https://img.thriftbooks.com/api/images/s/fedfc44765ea0090f3f942ce3865c097f6b4f578.jpg',
+  title:'The Odyssey',
+  author: 'Stieg Larson'
+}
 
 function BookList(){
-  
   return(
     <section className='list'>
-      <Book />
+      <Book img={firstBook.img} title={firstBook.title} author={firstBook.author} />
       </section>
   )
 }
@@ -20,17 +20,12 @@ function BookList(){
 const Book = (props) => {
   return(
     <article className='book'>
-      <img src={img} alt ="" />
-      <h1>{title}</h1>
-      <h4>{author}</h4>
+      <img src={props.img} alt ="" />
+      <h1>{props.title}</h1>
+      <h4>{props.author}</h4>
     </article>
   );
   };
-
-
-
-
-
 ReactDOM.render(<BookList />, document.getElementById('root')
 );
 
